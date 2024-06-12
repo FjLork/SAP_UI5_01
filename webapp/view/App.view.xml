@@ -24,10 +24,15 @@
                     width="100%"
                     height="100%"
                 >
+
                     <VBox alignItems="Center"
                           justifyContent="Center"
                           width="100%">
-                        <Text id="calculatorDisplay" text="0" />
+                        <Text id="calculatorDisplay1" text="0" />
+                        <Label id="calculatorDisplay"
+                                text="0"
+                                width="120px"
+                                design="Bold" />
                         <HBox>
                             <Button text="1" press=".onNumberPress"/>
                             <Button text="2" press=".onNumberPress"/>

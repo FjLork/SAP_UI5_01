@@ -24,11 +24,7 @@ sap.ui.define([
             this._resetAutoResetTimer();
 
             // Obtener el número del botón presionado
-            var sNumber = parseInt(sNumber, 10);
-            sNumber = oEvent.getSource().getText();
-             // Cambiar el texto del objeto por "ok"
-             var sNumberAux = sNumber + 1;
-             oEvent.getSource().setText( sNumberAux );
+            var sNumber = oEvent.getSource().getText();
 
             // Añadir el número a la pantalla
             this._currentValue += sNumber;
@@ -60,6 +56,12 @@ sap.ui.define([
                         break;
                     case "-":
                         fResult = this._previousValue - fCurrentValue;
+                        break;
+                    case "*":
+                        fResult = this._previousValue * fCurrentValue;
+                        break;
+                    case "/":
+                        fResult = this._previousValue / fCurrentValue;
                         break;
                 }
 
